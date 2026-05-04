@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <script type="module" crossorigin src="./assets/index-ZeJeAUaj.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-rdOTuWbc.css">
+</head>
+<body class="page">
+  <div class="page__content">
+    <main class="content">
+      <section class="profile">
+        <div class="profile__image" style="background-image: url(./images/avatar.jpg)"></div>
+        <div class="profile__info">
+          <h1 class="profile__title"></h1>
+          <button class="profile__edit-button" type="button"></button>
+          <p class="profile__description"></p>
+        </div>
+        <button class="profile__add-button" type="button"></button>
+      </section>
+
+      <section class="places">
+        <ul class="places__list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <template id="card-template">
+    <li class="card">
+      <img class="card__image" src="" alt="" />
+      <button class="card__control-button_type_info" type="button"></button>
+      <button class="card__delete-button" type="button"></button>
+      <div class="card__description">
+        <h2 class="card__title"></h2>
+        <div class="card__like-container">
+          <button class="card__like-button" type="button"></button>
+          <span class="card__like-count">0</span>
+        </div>
+      </div>
+    </li>
+  </template>
+
+  <template id="popup-info-definition-template">
+    <div class="popup__info-item">
+      <span class="popup__info-label"></span>
+      <span class="popup__info-value"></span>
+    </div>
+  </template>
+
+  <template id="popup-info-user-preview-template">
+    <span class="popup__user-preview"></span>
+  </template>
+
+  <div class="popup popup_type_edit">
+    <div class="popup__content">
+      <button class="popup__close" type="button"></button>
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <form class="popup__form" name="edit-profile">
+        <input type="text" name="name" class="popup__input" placeholder="Имя" required minlength="2" maxlength="40">
+        <input type="text" name="description" class="popup__input" placeholder="О себе" required minlength="2" maxlength="200">
+        <button type="submit" class="button popup__button">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup_type_avatar">
+    <div class="popup__content">
+      <button class="popup__close" type="button"></button>
+      <h3 class="popup__title">Обновить аватар</h3>
+      <form class="popup__form" name="edit-avatar">
+        <input type="url" name="link" class="popup__input" placeholder="Ссылка на картинку" required>
+        <button type="submit" class="button popup__button">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup_type_new-card">
+    <div class="popup__content">
+      <button class="popup__close" type="button"></button>
+      <h3 class="popup__title">Новое место</h3>
+      <form class="popup__form" name="new-place">
+        <input type="text" name="place-name" class="popup__input" placeholder="Название" required minlength="2" maxlength="30">
+        <input type="url" name="link" class="popup__input" placeholder="Ссылка на картинку" required>
+        <button type="submit" class="button popup__button">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup_type_info">
+    <div class="popup__content">
+      <button class="popup__close" type="button"></button>
+      <h3 class="popup__title">Информация о карточке</h3>
+      <div class="popup__info-list"></div>
+      <p class="popup__users-title">Лайкнули:</p>
+      <div class="popup__users-list"></div>
+    </div>
+  </div>
+
+  <div class="popup popup_type_remove-card">
+    <div class="popup__content">
+      <button class="popup__close" type="button"></button>
+      <h3 class="popup__title">Вы уверены?</h3>
+      <button type="button" class="button popup__button">Да</button>
+    </div>
+  </div>
+
+</body>
+</html>
