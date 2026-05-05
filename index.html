@@ -4,21 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto</title>
-  <script type="module" crossorigin src="./assets/index-ZeJeAUaj.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-rdOTuWbc.css">
+  <script type="module" crossorigin src="./assets/index-BbbFKUTr.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DJx0_IEs.css">
 </head>
 <body class="page">
+  <header class="header">
+    <p class="header__logo">Mesto<sup class="header__logo-sup">Russia</sup></p>
+  </header>
   <div class="page__content">
     <main class="content">
       <section class="profile">
-        <div class="profile__image" style="background-image: url(./images/avatar.jpg)"></div>
-        <div class="profile__info">
-          <h1 class="profile__title"></h1>
-          <button class="profile__edit-button" type="button"></button>
-          <p class="profile__description"></p>
-        </div>
-        <button class="profile__add-button" type="button"></button>
-      </section>
+  <div class="profile__container">
+    <div class="profile__image" style="background-image: url(./images/avatar.jpg)"></div>
+    <div class="profile__info">
+      <div class="profile__title-container">
+        <h1 class="profile__title"></h1>
+        <button class="profile__edit-button" type="button"></button>
+      </div>
+      <p class="profile__description"></p>
+    </div>
+  </div>
+  <button class="profile__add-button" type="button"></button>
+</section>
 
       <section class="places">
         <ul class="places__list"></ul>
